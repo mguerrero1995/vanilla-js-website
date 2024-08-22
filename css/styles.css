@@ -1,7 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
 }
 
 button {
@@ -10,11 +13,39 @@ button {
     cursor: pointer;
 }
 
+input[type="checkbox"] {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+}
+
+.checkbox-container {
+    position: relative;
+    overflow: scroll;
+    border: 1px black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.user-viewport {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    z-index: 1000; /* Ensures it is on top of other elements */
+}
+
 .button-container {
     display: flex;
-    flex-direction: vertical;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .button-container button {
